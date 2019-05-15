@@ -23,7 +23,7 @@ import java.io.IOException;
  * specific language governing permissions and limitations
  * under the License.
  */
-@Path("hello")
+@Path("response")
 public class Example3Resource {
 
     /**
@@ -39,10 +39,12 @@ public class Example3Resource {
      * URL: http://localhost:8080/response/test/fixed
      */
     @GET
-    @Path("/broken")
+    @Path("test/fixed")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getResponse() throws IOException {
-        String properResponse = "This site is now fixed.";
-        return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Broken").build();
-    }
+        //TODO: Modify the Path "response" and uri of the getResponse() method to be "<localhost:port>/response/test/fixed"
+        //TODO: Fix the response so that it returns a 200 OK instead of an internal server error.
+        // TODO:Return the Response with the String entity
+        String entity = "This site is now fixed.";
+        return Response.status(Response.Status.OK).entity(entity).build();    }
 }

@@ -15,11 +15,14 @@
 **/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import '../stylesheet.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+function User() {
+  return (
+    <div className='user'>
+      <i className='fa fa-user-o'/>
+      <p>John Smith</p>
+    </div>
+  );
+}
+
+export default User;

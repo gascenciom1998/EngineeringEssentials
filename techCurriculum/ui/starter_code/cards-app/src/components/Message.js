@@ -15,11 +15,13 @@
 **/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import '../stylesheet.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+function Message() {
+  return (
+    <div className='message-text'>
+      <p>React is so cool!</p>
+    </div>
+  );
+}
+
+export default Message;

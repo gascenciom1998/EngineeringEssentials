@@ -15,11 +15,17 @@
 **/
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import '../stylesheet.css';
+import User from './User';
+import Message from './Message';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+function Card() {
+  return (
+    <div className='card'>
+      <User />
+      <div className='card-main'>
+        <Message />
+      </div>
+    </div>
+  );
+}
+export default Card;
