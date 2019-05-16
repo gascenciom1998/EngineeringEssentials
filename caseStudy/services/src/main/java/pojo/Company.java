@@ -28,3 +28,85 @@ public class Company {
 
     // TODO - add getter and setter methods for your attributes
 }
+
+    @JsonProperty
+    private String symbol;
+
+    @JsonProperty
+    private String name;
+
+    @JsonProperty
+    private String headquartersCity;
+
+    @JsonProperty
+    private String headquarterStateorCountry
+
+    @JsonProperty
+    private int numberOfEmployees
+
+    @JsonProperty
+    private sector
+
+    @JsonProperty
+    private industry
+
+    public Company() {
+            }
+
+
+    public String getSymbol() {
+            return symbol;
+            }
+
+    public void setSymbol(String symbol) {
+            this.symbol= symbol;
+            }
+
+    public String getName() {
+            return name;
+            }
+
+    public void setName(String name) {
+            this.name = name;
+            }
+
+    public String getHeadquartersCity() {
+            return headquartersCity;
+            }
+
+    public void setHeadquartersCity(String headquartersCity) {
+            this.headquartersCity = headquartersCity;
+            }
+
+    public String getHeadquarterStateorCountry() {
+            return headquarterStateorCountry;
+            }
+
+    public void setHeadquarterStateorCountry(String headquarterStateorCountry) {
+            this.headquarterStateorCountry= headquarterStateorCountry;
+            }
+
+    public String getNumberOfEmployees() {
+            return numberOfEmployees;
+            }
+
+    public void setNumberOfEmployees(int numberOfEmployees) {
+            this.numberOfEmployees= numberOfEmployees;
+            }
+
+    public String getSector() {
+            return sector;
+            }
+
+    public void setSector(String sector) {
+            this.sector= sector;
+            }
+
+    public String getIndustry() {
+            return industry;
+            }
+
+    public void setIndustry(String industry) {
+            this.industry= industry;
+            }
+

@@ -1,3 +1,4 @@
+
 /**
  * Copyright 2019 Goldman Sachs.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,12 +15,34 @@
  * under the License.
  */
 
-package resources;
+
+    package resources;
+
+            import utility.FileHelper;
+            import pojo.Company;
+
+            import javax.ws.rs.GET;
+            import javax.ws.rs.Path;
+            import javax.ws.rs.Produces;
+            import javax.ws.rs.core.MediaType;
+            import javax.ws.rs.core.Response;
+            import java.io.IOException;
+            import java.util.List;
 
 // TODO - add your @Path here
+@Path("main")
 public class CompanyResource {
 
     // TODO - Add a @GET resource to get company data
     // Your service should return data for a given stock ticker
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/")
+    public Response getCompany() throws IOException {
+        List<Company> company = FileHelper.readAllCompanyData("/caseStudy/services/src/main/resources/data/companyInfo.json");
+        for (Company c : company) {
+        }
+        return Response.status(Response.Status.OK).entity(company).build();
+    }
 
 }
